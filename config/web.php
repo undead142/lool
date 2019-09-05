@@ -12,18 +12,30 @@ $config = [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
+    'modules' => [
+    'user' => [
+        'class' => 'dektrium\user\Module',
+    ],
+    'rbac' => [
+            'class' => 'yii2mod\rbac\Module',
+        ],
+],
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'verlisu5to45te8ryfoe7yGsetr',
         ],
+          'authManager' => [
+            'class' => 'yii\rbac\DbManager',
+            'defaultRoles' => ['guest', 'user'],
+        ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
-        'user' => [
-            'identityClass' => 'app\models\User',
-            'enableAutoLogin' => true,
-        ],
+        // 'user' => [
+        //     'identityClass' => 'app\models\User',
+        //     'enableAutoLogin' => true,
+        // ],
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
