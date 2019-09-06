@@ -15,20 +15,15 @@ $config = [
     'modules' => [
     'user' => [
         'class' => 'dektrium\user\Module',
-         'admins' => ['admin'],
+         'admins' => ['admin']
     ],
-    'rbac' => [
-            'class' => 'yii2mod\rbac\Module',
-        ],
+   'rbac' => 'dektrium\rbac\RbacConsoleModule',
+   'rbac' => 'dektrium\rbac\RbacWebModule',
     ],
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => 'verlisu5to45te8ryfoe7yGsetr',
-        ],
-          'authManager' => [
-            'class' => 'yii\rbac\DbManager',
-            'defaultRoles' => ['guest', 'user'],
+            'cookieValidationKey' => 'lool',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
