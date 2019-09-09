@@ -38,6 +38,10 @@ class SiteController extends Controller
         ];
     }
 
+    public function actionPost(){
+        return $this->render('post', compact('model'));
+    }
+
     /**
      * {@inheritdoc}
      */

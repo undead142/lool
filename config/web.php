@@ -15,7 +15,8 @@ $config = [
     'modules' => [
     'user' => [
         'class' => 'dektrium\user\Module',
-         'admins' => ['admin']
+         'admins' => ['bigon'],
+         'enableUnconfirmedLogin' => true,
     ],
    'rbac' => 'dektrium\rbac\RbacConsoleModule',
    'rbac' => 'dektrium\rbac\RbacWebModule',
