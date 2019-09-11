@@ -9,6 +9,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
+
 /**
  * PostController implements the CRUD actions for Post model.
  */
@@ -65,8 +66,10 @@ class PostController extends Controller
     public function actionCreate()
     {
         $model = new Post();
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+   
+        if ($model->load(Yii::$app->request->post()) ) {
+        $model->save();
+           
             return $this->redirect(['view', 'id' => $model->id]);
         }
 

@@ -4,6 +4,7 @@ namespace app\models;
 use yii\behaviors\TimestampBehavior;
 use Yii;
 use yii\db\Expression;
+use yii\behaviors\BlameableBehavior;
 /**
  * This is the model class for table "post".
  *
@@ -30,7 +31,7 @@ class Post extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'body', 'created_at', 'updated_at', 'author_id'], 'required'],
+            [['title', 'body'], 'required'],
             [['body'], 'string'],
             [['created_at', 'updated_at'], 'safe'],
             [['author_id'], 'integer'],
@@ -47,6 +48,11 @@ class Post extends \yii\db\ActiveRecord
             'updatedAtAttribute' => 'updated_at',
             'value' => new Expression('NOW()'),
         ],
+        [
+            'class' => BlameableBehavior::className(),
+            'createdByAttribute' => 'author_id',
+            'updatedByAttribute' => false,
+        ],
     ];
     }
     /**
@@ -61,6 +67,7 @@ class Post extends \yii\db\ActiveRecord
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
             'author_id' => 'Author ID',
+
         ];
     }
 }
