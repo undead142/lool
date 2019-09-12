@@ -20,7 +20,7 @@
         "yiisoft/yii2-swiftmailer": "~2.1.0",
         "dektrium/yii2-user": "^0.9.14",
         "yii2mod/yii2-rbac": "*",
-        "dektrium/yii2-rbac": "1.0.0-alpha@dev"
+        "dektrium/yii2-rbac": "1.0.1"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",

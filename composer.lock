@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "296ef550c4b5f2d015c7e43f41a1ec94",
+    "content-hash": "bdb10144446a0a739f0971e16b5c2ced",
     "packages": [
         {
             "name": "2amigos/yii2-arrayquery-component",
@@ -249,16 +249,16 @@
         },
         {
             "name": "dektrium/yii2-rbac",
-            "version": "1.0.0-alpha",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dektrium/yii2-rbac.git",
-                "reference": "0943e66c450132b306584a37caefc2aa04258372"
+                "reference": "2dac3918af17178f2ba944d4338c3fcfa732d08c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dektrium/yii2-rbac/zipball/0943e66c450132b306584a37caefc2aa04258372",
-                "reference": "0943e66c450132b306584a37caefc2aa04258372",
+                "url": "https://api.github.com/repos/dektrium/yii2-rbac/zipball/2dac3918af17178f2ba944d4338c3fcfa732d08c",
+                "reference": "2dac3918af17178f2ba944d4338c3fcfa732d08c",
                 "shasum": ""
             },
             "require": {
@@ -298,7 +298,7 @@
                 "yii2",
                 "yii2-rbac"
             ],
-            "time": "2016-08-15T15:49:54+00:00"
+            "time": "2018-03-26T12:33:41+00:00"
         },
         {
             "name": "dektrium/yii2-user",
@@ -361,28 +361,30 @@
         },
         {
             "name": "doctrine/lexer",
-            "version": "1.0.2",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/lexer.git",
-                "reference": "1febd6c3ef84253d7c815bed85fc622ad207a9f8"
+                "reference": "e17f069ede36f7534b95adec71910ed1b49c74ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/lexer/zipball/1febd6c3ef84253d7c815bed85fc622ad207a9f8",
-                "reference": "1febd6c3ef84253d7c815bed85fc622ad207a9f8",
+                "url": "https://api.github.com/repos/doctrine/lexer/zipball/e17f069ede36f7534b95adec71910ed1b49c74ea",
+                "reference": "e17f069ede36f7534b95adec71910ed1b49c74ea",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.2"
+                "php": "^7.2"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.5"
+                "doctrine/coding-standard": "^6.0",
+                "phpstan/phpstan": "^0.11.8",
+                "phpunit/phpunit": "^8.2"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -396,12 +398,12 @@
             ],
             "authors": [
                 {
-                    "name": "Roman Borschel",
-                    "email": "roman@code-factory.org"
-                },
-                {
                     "name": "Guilherme Blanco",
                     "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
                 },
                 {
                     "name": "Johannes Schmitt",
@@ -417,7 +419,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2019-06-08T11:03:04+00:00"
+            "time": "2019-07-30T19:33:28+00:00"
         },
         {
             "name": "egulias/email-validator",
@@ -4339,9 +4341,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "dektrium/yii2-rbac": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
