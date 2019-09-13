@@ -15,11 +15,11 @@ $config = [
     'modules' => [
     'user' => [
         'class' => 'dektrium\user\Module',
-         'admins' => ['bigon'],
+          //'admins' => ['admin'],
+         'adminPermission' => 'admin',
          'enableUnconfirmedLogin' => true,
     ],
-   'rbac' => 'dektrium\rbac\RbacConsoleModule',
-   'rbac' => 'dektrium\rbac\RbacWebModule',
+     'rbac' => 'dektrium\rbac\RbacWebModule',
     ],
     'components' => [
         'request' => [
@@ -29,10 +29,7 @@ $config = [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
-        // 'user' => [
-        //     'identityClass' => 'app\models\User',
-        //     'enableAutoLogin' => true,
-        // ],
+
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
